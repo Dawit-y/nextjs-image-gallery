@@ -34,13 +34,16 @@ export default function Navbar() {
               <a>Item 1</a>
             </li>
             <li>
-              <a>Parent</a>
+              <a>Caching Methods</a>
               <ul className="p-2">
                 <li>
-                  <a>Submenu 1</a>
+                  <Link href={"/static"}>Static</Link>
                 </li>
                 <li>
-                  <a>Submenu 2</a>
+                  <Link href={"/dynamic"}>Dynamic</Link>
+                </li>
+                <li>
+                  <Link href={"/isr"}>ISR</Link>
                 </li>
               </ul>
             </li>
@@ -50,7 +53,7 @@ export default function Navbar() {
           </ul>
         </div>
         <Link className="btn btn-ghost text-xl" href="/">
-          daisyUI
+          DGallery
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -60,13 +63,16 @@ export default function Navbar() {
           </li>
           <li>
             <details>
-              <summary>Parent</summary>
+              <summary>Caching Methods</summary>
               <ul className="p-2">
                 <li>
-                  <a>Submenu 1</a>
+                  <Link href={"/static"}>Static</Link>
                 </li>
                 <li>
-                  <a>Submenu 2</a>
+                  <Link href={"/dynamic"}>Dynamic</Link>
+                </li>
+                <li>
+                  <Link href={"/isr"}>ISR</Link>
                 </li>
               </ul>
             </details>

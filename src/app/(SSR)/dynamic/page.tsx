@@ -2,11 +2,17 @@ import { UnsplashImage } from "@/models/unsplash";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function Static() {
+export const metadata = {
+  title: "Dynamic Image Fetching",
+};
+export const revalidate = 0;
+
+export default async function Dynamic() {
   const response = await fetch(
     "https://api.unsplash.com/photos/random?client_id=" +
       process.env.UNSPLASH_ACCESS_KEY
   );
+
   const image: UnsplashImage = await response.json();
 
   const width = Math.min(500, image.width);
